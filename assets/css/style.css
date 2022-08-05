@@ -4,12 +4,16 @@
 
 /* Root Value Stylings */
 
+html {
+    font-size: 16px;
+}
 
 :root {
     --std-margin: 3rem;
     --font-size: 2rem;
     --font-color: white;
-    --background-color: gray;
+    --background-color: rgb(0, 0, 0);
+    --gradient: linear-gradient(0deg, rgba(36,0,0,1) 0%, rgba(255,216,4,1) 50%, rgba(255,255,255,1) 100%);
 }
 
 *,
@@ -20,14 +24,118 @@
     margin: none;
 }
 
+/* Lyrics */
+.marquee {
+    position: fixed;
+    left: 0;
+    bottom: -20px;
+    width: 100%;
+    color:goldenrod;
+    background-color: black;
+    padding: 10px;
+    border-top: 2px dotted goldenrod;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    font-family: 'OCR-A', monospace;
+    font-size: 16px;
+    line-height: 1.25;
+    color: white;
+    z-index: 2;
+}
+
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    color:goldenrod;
+    will-change: transform;
+    animation: marquee 200s linear infinite;
+}
+
+.marquee span:hover {
+    animation-play-state: paused
+}
+
+@keyframes marquee {
+   0% { transform: translate(0, 0); }
+   100% { transform: translate(-100%, 0); }
+}
+
+.black{
+    color:black; 
+}
 
 /* Body Stylings */
-
-
 body {
-    background-color: var(--background-color);
-    margin: var(--std-margin);
     font-size: var(--font-size);
-    font-family: sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--font-color);
+    margin: 0rem;
+}
+
+ul {
+    margin: 0rem;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    /* position: absolute; */
+    background-color: var(--background-color);
+    border-bottom: 3px dotted goldenrod;
+}
+
+.left {
+    width: 50%;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    /* background: blue; */
+}
+
+.right {
+    width: 50%;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    /* background: red; */
+}
+
+/* Section I - Introduction */
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 20rem;
+    text-transform: uppercase;
+    background: var(--gradient);
+    text-align: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0rem;
+}
+
+/* .summary {
+    text-align: center;
+    width: 40%;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
+
+/* Section II - What are the Golden Records? */
+.block {
+    margin: 1rem;
+    padding: 3rem;
+    width: 80%;
+    height: 80%;
+    border-radius: 16px;
+    background: black;
+    color: goldenrod;
+    filter: drop-shadow(3px 4px 10px goldenrod);
+    text-shadow: 2px 2px 5px goldenrod;
 }
