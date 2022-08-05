@@ -1,0 +1,33 @@
+/******************************************************************************
+                            Stylesheet for Boilerplate
+******************************************************************************/
+
+/* Root Value Stylings */
+
+
+:root {
+    --std-margin: 3rem;
+    --font-size: 2rem;
+    --font-color: white;
+    --background-color: gray;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: none;
+    padding: 0;
+    margin: none;
+}
+
+
+/* Body Stylings */
+
+
+body {
+    background-color: var(--background-color);
+    margin: var(--std-margin);
+    font-size: var(--font-size);
+    font-family: sans-serif;
+    color: var(--font-color);
+}
