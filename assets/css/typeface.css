@@ -1,30 +1,36 @@
 @font-face {
-  font-family: '';
-  src: url(../fonts/) format('otf');
+  font-family: "Futura";
+  src: url(../fonts/FuturaStd-Book.otf) format("otf");
   font-style: normal;
   font-weight: 400;
 }
 @font-face {
-  font-family: '';
-  src: url(../fonts/) format('otf');
-  font-style: bold;
-  font-weight: 600;
+  font-family: "Futura";
+  src: url(../fonts/FuturaStd-BookOblique.otf) format("otf");
+  font-style: italics;
+  font-weight: 400;
 }
 @font-face {
-  font-family: '';
-  src: url(../fonts/) format('otf');
-  font-style: italic;
-  font-weight: 600;
-}
-@font-face {
-  font-family: '';
-  src: url(../fonts/) format('otf');
+  font-family: "Futura";
+  src: url(../fonts/FuturaStd-Bold.otf) format("otf");
   font-style: bold;
   font-weight: 700;
 }
 @font-face {
-  font-family: '';
-  src: url(../fonts/) format('otf');
+  font-family: "";
+  src: url(../fonts/FuturaStd-BoldOblique.otf) format("otf");
   font-style: italic;
   font-weight: 700;
+}
+@font-face {
+  font-family: "Futura";
+  src: url(../fonts/FuturaStd-Heavy.otf) format("otf");
+  font-style: bold;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Futura";
+  src: url(../fonts/FuturaStd-HeavyOblique.otf) format("otf");
+  font-style: italic;
+  font-weight: 600;
 }
