@@ -1,17 +1,14 @@
-<!-- START OF HTML -->
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <!--
       This is the page head - it contains info the browser uses to display the page
     -->
-
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="assets/icon/favicon.ico" />
     <title>Fool's Gold</title>
-
     <!-- Meta tags for SEO and social sharing -->
     <link rel="canonical" href="" />
     <meta name="description" content="" />
@@ -25,75 +22,100 @@
     <link rel="stylesheet" href="assets/css/reset.css" />
     <!-- <link rel="stylesheet" href="assets/css/debug.css" /> -->
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="assets/js/particles.js" defer></script>
     <script src="assets/js/script.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  </head>
+</head>
 
-  <body>
-    <!-- Lyrics -->
-    <div class="left center smaller">
-      <div class="center orbit zero rotating" id="rot8">
-        <div class="orbit one"></div>
-        <div class="orbit two"></div>
-        <div class="orbit three"></div>
-      </div>
+<body>
+    <!-- Voyager Record -->
+    <div class="smaller">
+        <div class="center orbit zero rotating" id="rot8">
+            <div class="orbit one"></div>
+            <div class="orbit two"></div>
+            <div class="orbit three"></div>
+        </div>
     </div>
+
+    <!-- Navbar -->
+    <nav>
+        <ul class="navbar">
+            <li class="nav-button"><a href="#cover">Fool's Gold</a></li>
+            <li class="nav-button"><a href="#track-1">What</a></li>
+            <li class="nav-button"><a href="#track-2">When</a></li>
+            <li class="nav-button"><a href="#track-3">Why</a></li>
+            <li class="nav-button"><a href="#track-4">How</a></li>
+        </ul>
+    </nav>
+
+    <!-- Lyrics Marquee -->
     <p class="marquee bottom" id="bottom-scroll">
-      <span>
-        A rat done bit my sister Nell. // (with Whitey on the moon) // Her face
-        and arms began to swell. // (and Whitey's on the moon) // I can't pay no
-        doctor bill. // (but Whitey's on the moon) // Ten years from now I'll be
-        payin' still. // (while Whitey's on the moon) // The man jus' upped my
-        rent las' night. // ('cause Whitey's on the moon) // No hot water, no
-        toilets, no lights. // (but Whitey's on the moon) // I wonder why he's
-        uppi' me? // ('cause Whitey's on the moon?) // I was already payin' 'im
-        fifty a week. // (with Whitey on the moon) // Taxes takin' my whole damn
-        check, // Junkies makin' me a nervous wreck, // The price of food is
-        goin' up, // An' as if all that shit wasn't enough // A rat done bit my
-        sister Nell. // (with Whitey on the moon) // Her face an' arm began to
-        swell. // (but Whitey's on the moon) // Was all that money I made las'
-        year // (for Whitey on the moon?) // How come there ain't no money here?
-        // (Hm! Whitey's on the moon) // Y'know I jus' 'bout had my fill // (of
-        Whitey on the moon) // I think I'll sen' these doctor bills, // Airmail
-        special. // (to Whitey on the moon) //
-      </span>
+        <span>
+            A rat done bit my sister Nell. // (with Whitey on the moon) // Her face
+            and arms began to swell. // (and Whitey's on the moon) // I can't pay no
+            doctor bill. // (but Whitey's on the moon) // Ten years from now I'll be
+            payin' still. // (while Whitey's on the moon) // The man jus' upped my
+            rent las' night. // ('cause Whitey's on the moon) // No hot water, no
+            toilets, no lights. // (but Whitey's on the moon) // I wonder why he's
+            uppi' me? // ('cause Whitey's on the moon?) // I was already payin' 'im
+            fifty a week. // (with Whitey on the moon) // Taxes takin' my whole damn
+            check, // Junkies makin' me a nervous wreck, // The price of food is
+            goin' up, // An' as if all that shit wasn't enough // A rat done bit my
+            sister Nell. // (with Whitey on the moon) // Her face an' arm began to
+            swell. // (but Whitey's on the moon) // Was all that money I made las'
+            year // (for Whitey on the moon?) // How come there ain't no money here?
+            // (Hm! Whitey's on the moon) // Y'know I jus' 'bout had my fill // (of
+            Whitey on the moon) // I think I'll sen' these doctor bills, // Airmail
+            special. // (to Whitey on the moon) //
+        </span>
     </p>
 
-    <ul>
-      <li>
-        <!-- Section I - Introduction -->
-        <section class="center">
-          <h1>Fool's Gold</h1>
-          <!-- <p class="summary">
+    <!-- Sections -->
+    <main>
+        <ul>
+            <li>
+                <!-- Section I - Introduction -->
+                <section class="center" id="cover">
+                    <div class="wrapper introduction"></div>
+                    <h1>Fool's Gold</h1>
+                    <div id="particles-js"></div>
+                    <!-- <p class="summary">
           An exploration into the US Government's ignorance in pursuit of science.
         </p> -->
-        </section>
-      </li>
+                </section>
+            </li>
+            <li>
+                <!-- Section II - Golden Records -->
+                <section class="center" id="track-1">
+                    <img src="./assets/img/voyager-record.png" alt="the Golden Records" class="img" />
+                    <div class="right center cover">
+                        <div class="title-block center">
+                            <h2 class="title">What are the Golden Records?</h2>
+                        </div>
+                        <div class="block center">
+                            <p class="text">
+                                The Voyager Golden Records are two phonograph records that were
+                                included aboard both Voyager spacecraft launched in 1977. The
+                                records contain sounds and images selected to portray the
+                                diversity of life and culture on Earth, and are intended for any
+                                intelligent extraterrestrial life form who may find them.
+                                <br /><br />Inspired by the song
+                                <a href="https://en.wikipedia.org/wiki/Whitey_on_the_Moon" class="link">Whitey on the Moon, by Gil-Scott Heron,</a>
+                                this website aims to use the Golden Records as a means of
+                                information, but to critique the United States Government's
+                                decision to prioritise funding the Space Race above their own
+                                people. Each section of informatin assumes the role of a 'track'
+                                on the record.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </li>
+            <li>
+                <section class="center"></section>
+            </li>
+        </ul>
+    </main>
+</body>
 
-      <li>
-        <!-- Section II - Golden Records -->
-        <section class="center">
-          <h2 class="title">What are the Golden Records?</h2>
-          <div class="right center">
-            <div class="block center">
-              <p>
-                The Voyager Golden Records are two phonograph records that were
-                included aboard both Voyager spacecraft launched in 1977. The
-                records contain sounds and images selected to portray the
-                diversity of life and culture on Earth, and are intended for any
-                intelligent extraterrestrial life form who may find them.
-                <br><br>Inspired by the song <a href="https://en.wikipedia.org/wiki/Whitey_on_the_Moon" class="link">Whitey on the Moon, by Gil-Scott Heron,</a> this website aims to use the Golden Records as a means of information, but to critique the United States Government's decision to prioritise funding the Space Race above their own people. Each section of informatin assumes the role of a 'track' on the record. 
-              </p>
-            </div>
-          </div>
-        </section>
-      </li>
-
-      <li>
-        <section class="center"></section>
-      </li>
-    </ul>
-  </body>
 </html>
-
-<!-- END OF HTML -->
