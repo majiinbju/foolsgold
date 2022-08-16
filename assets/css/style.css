@@ -10,7 +10,7 @@ html {
 
 :root {
     --std-margin: 3rem;
-    --font-size: 1.5rem;
+    --font-size: 1.65rem;
     --font-color: white;
     --background-color: rgb(0, 0, 0);
     --border: 1px solid black;
@@ -96,7 +96,7 @@ body {
     font-weight: 400;
     font-style: normal;
     color: var(--font-color);
-    line-height: 1.1;
+    line-height: 1.2;
     margin: 0rem;
     transition: all 1ms ease-in-out;
 }
