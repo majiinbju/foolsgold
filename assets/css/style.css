@@ -10,7 +10,7 @@ html {
 
 :root {
     --std-margin: 3rem;
-    --font-size: 1.65rem;
+    --font-size: 1.5rem;
     --font-color: white;
     --background-color: rgb(0, 0, 0);
     --border: 1px solid black;
@@ -41,58 +41,10 @@ html {
     margin: none;
 }
 
-/* Lyrics */
-.marquee {
-    position: fixed;
-    left: 0;
-    bottom: 0px;
-    width: 100%;
-    color: goldenrod;
-    background-color: black;
-    padding: 10px;
-    border-top: 2px dotted goldenrod;
-    overflow: hidden;
-    white-space: nowrap;
-    box-sizing: border-box;
-    font-family: "OCR-A", monospace;
-    font-size: 16px;
-    line-height: 1.25;
-    color: white;
-    z-index: 4;
-}
-
-.marquee span {
-    display: inline-block;
-    padding-left: 100%;
-    color: goldenrod;
-    will-change: transform;
-    animation: marquee 200s linear infinite;
-}
-
-.marquee span:hover {
-    animation-play-state: paused;
-}
-
-@keyframes marquee {
-    0% {
-        transform: translate(0, 0);
-    }
-
-    100% {
-        transform: translate(-100%, 0);
-    }
-}
-
-.black {
-    color: black;
-}
-
 /* Body Stylings */
 body {
     font-size: var(--font-size);
-    /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
-    font-family: futura-pt, sans-serif; 
+    font-family: 'Space Grotesk', sans-serif;
     font-weight: 400;
     font-style: normal;
     color: var(--font-color);
@@ -107,31 +59,13 @@ ul {
 }
 
 section {
+    display: grid;
     width: 100vw;
     height: 100vh;
-    /* position: absolute; */
     background-color: var(--background-color);
-    /* border-bottom: 3px dotted goldenrod; */
+    grid-template-columns: repeat(12, [col-start] 1fr);
 }
 
-canvas {
-    display: block;
-    vertical-align: bottom;
-}
-
-#particles-js {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    background-color: none;
-    z-index: 3;
-}
-
-.wrapper {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
 
 .img {
     width: 100%;
@@ -140,7 +74,7 @@ canvas {
 }
 
 .left {
-    width: 50%;
+    width: 60%;
     position: absolute;
     left: 0;
     height: 100%;
@@ -148,53 +82,13 @@ canvas {
 }
 
 .right {
-    width: 50%;
-    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    position: fixed;
     right: 0;
-    height: 100%;
-    /* background: red; */
-}
-
-.block {
-    margin: 1rem;
-    padding: 2rem;
-    width: 80%;
-    height: 80%;
-    max-height: 90%;
-    border-radius: 16px;
-    background: rgba(0, 0, 0, 0.95);
-    color: gray;
-    transition: all 0.5s ease-in-out;
-    color: goldenrod;
-    /* text-shadow: 2px 2px 5px goldenrod; */
-    filter: drop-shadow(3px 4px 10px goldenrod);
-    z-index: 1;
-}
-
-.title-block {
-    margin: 1rem;
-    position: absolute;
-    padding: 2rem;
-    width: 80%;
-    height: 80%;
-    border-radius: 16px;
-    background: rgba(0, 0, 0, 0.95);
-    color: gray;
-    transition: all 0.5s ease-in-out;
-    color: goldenrod;
-    /* text-shadow: 2px 2px 5px goldenrod; */
-    filter: drop-shadow(3px 4px 10px goldenrod);
-    opacity: 1;
-    z-index: 2;
-}
-
-.cover:hover > .title-block {
-    opacity: 0;
-    width: 0;
-}
-
-.text {
-    filter: drop-shadow(1px 2px 5px goldenrod);
+    height: 100vh;
 }
 
 .link {
@@ -205,49 +99,24 @@ canvas {
 
 .link:hover {
     color: blue;
-    text-decoration: underline;
-}
-
-.title {
-    font-family: Helvetica, sans-serif;
-    font-size: 5rem;
-    font-weight: 600;
-    width: 100%;
-    /* margin: var(--std-margin); */
-    /* text-align: center; */
-    text-transform: uppercase;
-    color: goldenrod;
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.text {
 }
 
 /* Section I - Introduction */
-.center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
 h1 {
-    font-family: Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 600;
-    font-size: 15rem;
+    font-size: 5rem;
     text-transform: uppercase;
-    text-align: center;
-    margin: 0rem;
-    z-index: 2;
     background: var(--gradient);
-    /* -webkit-text-stroke: 2px black; */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .introduction {
+    display: grid;
+    grid-template-columns: repeat(12, [col-start] 1fr [col-end]);
+    grid-template-rows: repeat(6, [col-start] 1fr [col-end]);
     background: linear-gradient(
         to bottom,
         rgba(0, 0, 0, 1) 50%,
@@ -256,119 +125,9 @@ h1 {
     );
 }
 
-/* .summary {
-    text-align: center;
-    width: 40%;
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-} */
-
-/* Section II - What are the Golden Records? */
-/* Navbar */
-nav {
-    width: 100%;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 4;
-}
-
-.navbar {
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
-    display: flex;
-    margin: 2rem;
-    font-size: 1rem;
-}
-
-.navbar a {
-    text-transform: uppercase;
-    color: goldenrod;
-    text-decoration: none;
-}
-
-.navbar a:hover {
-    color: white;
-}
-
-.nav-button {
-    margin: 10px;
-    padding: 1rem;
-    background: none;
-    filter: drop-shadow(3px 4px 10px goldenrod);
-    border-radius: 16px;
-}
-
-.nav-button:hover {
-    filter: drop-shadow(3px 4px 10px white);
-}
-
-/* Records Orbit */
-.golden-record {
-    transform: scale(0.3);
-    position: fixed;
-    bottom: 9rem;
-    right: 7rem;
-    margin: 2rem;
-    transition: all 0.25s ease-in-out;
-}
-
-.orbit {
-    background: var(--gradient);
-    /* background: radial-gradient(circle, rgba(126,105,19,1) 0%, rgba(255,185,5,1) 100%); */
-    border: var(--border);
-    border-radius: 50%;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.zero {
-    background: radial-gradient(
-        circle,
-        rgba(126, 105, 19, 1) 0%,
-        rgba(255, 185, 5, 1) 100%
-    );
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-    position: fixed;
-    z-index: 1;
-}
-
-.one {
-    transform: rotate(45deg);
-    width: 400px;
-    height: 400px;
-}
-
-.two {
-    transform: rotate(-45deg);
-    width: 300px;
-    height: 300px;
-}
-
-.three {
-    transform: rotate(120deg);
-    width: 200px;
-    height: 200px;
-}
-
-/* Rotating function */
-@keyframes rotating {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.rotating {
-    animation: rotating 1s ease-in infinite;
+.summary {
+    z-index: 2;
+    grid-column: 2 / -2;
+    grid-row: 3 / 4;
+    align-self: center;
 }
